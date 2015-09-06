@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8175.2" systemVersion="15A263e" minimumToolsVersion="Automatic">
+    <entity name="Filter" representedClassName=".Filter" syncable="YES">
+        <attribute name="searchString" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="newFilter" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Wiki" inverseName="searchResults" inverseEntity="Wiki" syncable="YES"/>
+    </entity>
+    <entity name="Wiki" representedClassName=".Wiki" syncable="YES">
+        <attribute name="timestamp" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="searchResults" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Filter" inverseName="newFilter" inverseEntity="Filter" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Filter" positionX="-63" positionY="-18" width="128" height="73"/>
+        <element name="Wiki" positionX="189" positionY="-88" width="128" height="88"/>
+    </elements>
+</model>
